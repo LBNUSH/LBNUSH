@@ -4,15 +4,7 @@ pragma solidity ^0.5.0;
 
 import "./TRC20.sol";
 import "./TRC20Detailed.sol";
-
-contract Token is TRC20, TRC20Detailed {
-
-    constructor () public TRC20Detailed(" SAFE ANIMAL AROUND THE WORLD", "SAAW", 3) {
-        _mint(msg.sender, 100000000 * (10 ** uint256(decimals())));
-    }
-}
-pragma solidity ^0.5.0;
-contract SAAW {
+   
     mapping(address => uint) public balances;
     mapping(address =>mapping(address => uint)) public allowence;
     uint public totalsupply = 100000000 * 10 ** 3;
@@ -48,5 +40,10 @@ contract SAAW {
         emit Approval(msg.sender, spender, value);
         return true;
 
+    }
+    contract Token is TRC20, TRC20Detailed {
+
+    constructor () public TRC20Detailed(" SAFE ANIMAL AROUND THE WORLD", "SAAW", 3) {
+        _mint(msg.sender, 100000000 * (10 ** uint256(decimals())));
     }
 }
