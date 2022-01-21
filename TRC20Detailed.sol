@@ -2,9 +2,7 @@ pragma solidity ^0.5.0;
 
 import "./ITRC20.sol";
 
-/**
- * @dev Optional functions from the TRC20 standard.
- */
+
 contract TRC20Detailed is ITRC20 {
     string private _name;
     string private _symbol;
@@ -15,20 +13,13 @@ contract TRC20Detailed is ITRC20 {
     _decimals = 3;
     }
 
-    /**
-     * @dev Sets the values for `name`, `symbol`, and `decimals`. All three of
-     * these values are immutable: they can only be set once during
-     * construction.
-     */
+
     constructor (string memory name, string memory symbol, uint8 decimals) public {
         _name = name;
         _symbol = symbol;
         _decimals = decimals;
     }
 
-    /**
-     * @dev Returns the name of the token.
-     */
     function name() public view returns (string memory) {
         return _name;
     }
