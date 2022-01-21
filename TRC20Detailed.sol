@@ -10,6 +10,11 @@ contract TRC20Detailed is ITRC20 {
     string private _symbol;
     uint8 private _decimals;
 
+    _name = "SAFE ANIMAL AROUND THE WORLD";
+    _symbol = "SAAW" ;
+    _decimals = 3;
+    }
+
     /**
      * @dev Sets the values for `name`, `symbol`, and `decimals`. All three of
      * these values are immutable: they can only be set once during
